@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+ <!-- Font Awesome CDN -->
+</head>
+<body>
+
+    <div class="container">
+        <h1><i class="fa fa-shopping-cart" style="font-size:30px;color:#45c287"></i> Shopping Cart</h1>
+    
+
+        <div id="cart-items" class="cart-items"></div>
+        <div id="totals" class="totals">
+            <p id="total-items"></p>
+            <p id="total-peso"></p>
+        </div>
+        <button id="remove-all-btn" class="remove-all-btn"><i class="fas fa-trash-alt"></i> Remove All Items</button> <!-- Added trash icon -->
+        
+        <button id="place-order-btn" class="place-order-btn"><i class="fas fa-check"></i> Place Order</button> <!-- Added check icon -->
+ 
+        <div class="back-to-home">
+            <a href="index.html"><i class="fa fa-home"></i> Back to Home</a> <!-- Font Awesome icon -->
+        </div>
+    </div>
+
+    <!-- Message container -->
+    <div class="message-container" id="message-container" style="display: none;">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <p class="message-text"></i> Your order has been placed. Thank you for choosing us!</p>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="plcorder.js"></script>
+</body>
+</html>

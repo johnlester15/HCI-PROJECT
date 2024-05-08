@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color:#45c287;
+}
+
+.cart-items {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items and place order button */
+    margin-bottom: 20px;
+}
+
+.item-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-details h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.item-details .price {
+    color: #ff3e6c;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.remove-btn {
+    background-color: #e63f3f; /* Red color for remove button */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.remove-btn:hover{
+    box-shadow: 0 0 10px rgba(221, 38, 38, 0.7);
+}
+.place-order-btn {
+    background-color: #10a31cce; /* Keep the same color for place order button */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+}
+
+.place-order-btn:hover {
+    box-shadow: 0 0 10px rgba(0, 226, 121, 0.7); /* Apply box-shadow on hover */
+}
+
+/* Back to Home Button */
+.back-to-home {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-to-home a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #45c287;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-to-home a:hover {
+    background-color: #10221b;
+}
+
+.message-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0c8a4ff3;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    display: none;
+}
+
+/* Add this CSS for the close button inside the message container */
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+/* Add this CSS for styling the message text */
+.message-text {
+    font-size: 18px;
+   
+}
+
+/* Add this CSS to hide the scrollbar on the body when message is displayed */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Add unique styles for the Remove All Items button */
+.remove-all-btn {
+    background-color: #ffa500; /* Orange color for Remove All Items button */
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.remove-all-btn:hover {
+    background-color: #ff7f00; /* Darker orange on hover */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 10px; /* Adjust padding for smaller screens */
+    }
+    
+    .cart-item {
+        flex-direction: column; /* Display items vertically on smaller screens */
+        text-align: center; /* Center align items on smaller screens */
+    }
+    
+    .item-image img {
+        margin-right: 0; /* Remove right margin for image on smaller screens */
+        margin-bottom: 10px; /* Add bottom margin for image on smaller screens */
+    }
+    
+    .item-details {
+        margin-bottom: 10px; /* Add bottom margin for item details on smaller screens */
+    }
+    
+    .back-to-home a {
+        display: block; /* Display back to home link as block element on smaller screens */
+        margin-top: 20px; /* Add top margin for back to home link on smaller screens */
+    }
+    .message-text {
+        font-size: 14px;
+    }
+
+    .success-message,
+    .error-message {
+        font-size: 16px;
+    }
+}
+/* Media queries for responsive text content */
+
+@media screen and (max-width: 400px) {
+    .message-text {
+        font-size: 12px;
+    }
+
+    .success-message,
+    .error-message {
+        font-size: 14px;
+    }
+}
+
